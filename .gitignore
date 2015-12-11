@@ -1,0 +1,4 @@
+.vagrant/
+bin/
+obj/
+project.lock.json
