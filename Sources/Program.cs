@@ -10,7 +10,7 @@ namespace ConsoleApplication
             if (args.Length != 1) {
                 Console.WriteLine("Usage: hello NAME");
             } else {
-                Console.WriteLine(Greeter.sayHello(args[0]));
+                Console.WriteLine(Greeter.SayHello(args[0]));
             }
         }
     }
