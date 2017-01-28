@@ -1,10 +1,11 @@
-# Lab | Hello World .NET Application on Linux
+# Lab :: Hello World :: C# Application on Linux
 
-[![License](https://img.shields.io/github/license/odaceo/lab-hello-world-dotnet-linux.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/odaceo/lab-hello-world-csharp.svg)](LICENSE)
+[![Build Status](https://travis-ci.org/odaceo/lab-hello-world-csharp.svg)](https://travis-ci.org/odaceo/lab-hello-world-csharp)
 
 ## Description
 
-A simple .NET application on Linux.
+A simple C# application on Linux.
 
 ## Prerequisites
 
@@ -29,39 +30,36 @@ dotnet restore
 
 ## Compiling the application
 
-The compile command makes a standalone binary file.
+The publish command produces binary files you can run without intalled .NET Core runtime.
+Use the following command for the current operating system and architecture:
 
 ``` shell
-dotnet compile --configuration Release --native
+dotnet publish -c release
 ```
+
+Use the following command for macOS Sierra:
+
+``` shell
+dotnet publish -c release -r osx.10.12-x64
+```
+
+See [the Self-contained deployments documentation](https://docs.microsoft.com/en-us/dotnet/articles/core/deploying/index#self-contained-deployments-scd) for more details.
 
 ## Running the application
 
 To launch the application use the following command:
 
 ``` shell
-bin/Release/dnxcore50/Hello World
+./bin/release/netcoreapp1.1/ubuntu.16.04-x64/publish/hello Odaceo
 ```
-
-## Releasing the application
-
-Step-by-step instructions for releasing the application:
-
-1. Start a new release
-
-        git flow release start x.y.z
-
-1. Finish the release
-
-        git flow release finish -m "Release x.y.z" x.y.z
 
 ## Reporting Issues
 
-Issues can be reported at [https://github.com/odaceo/lab-hello-world-dotnet-linux/issues](https://github.com/odaceo/lab-hello-world-dotnet-linux/issues)
+Issues can be reported at [https://github.com/odaceo/lab-hello-world-csharp/issues](https://github.com/odaceo/lab-hello-world-csharp/issues)
 
 ## Source code
 
-The source code is available at [https://github.com/odaceo/lab-hello-world-dotnet-linux](https://github.com/odaceo/lab-hello-world-dotnet-linux)
+The source code is available at [https://github.com/odaceo/lab-hello-world-csharp](https://github.com/odaceo/lab-hello-world-csharp)
 
 ## License
 
