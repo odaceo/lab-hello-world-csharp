@@ -20,5 +20,6 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/xenial64"
 
   config.vm.provision "shell", privileged: false, 
-    path: "https://github.com/odaceo/script-ubuntu-dotnet/raw/master/install.sh"
+    path: "https://github.com/odaceo/script-ubuntu-dotnet/raw/master/install.sh",
+    args: ["1.0.0-preview2-003156"]
 end

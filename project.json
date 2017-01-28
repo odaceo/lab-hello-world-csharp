@@ -5,11 +5,15 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
+  "dependencies": {},
   "frameworks": {
-    "netcoreapp1.1": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.3"
+        }
+      },
+      "imports": "dnxcore50"
     }
   },
   "runtimes": {
