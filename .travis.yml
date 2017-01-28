@@ -1,0 +1,12 @@
+language: csharp
+
+mono: none
+dotnet: 1.0.0-preview2.1-003177
+
+os: linux
+dist: trusty
+
+script:
+  - dotnet restore
+  - dotnet build -c release
+  - dotnet run Odaceo
