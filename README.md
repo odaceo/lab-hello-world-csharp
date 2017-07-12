@@ -42,7 +42,7 @@ dotnet publish -c release
 To launch the application use the following command:
 
 ``` shell
-./bin/release/netcoreapp1.0/ubuntu.16.04-x64/publish/hello Odaceo
+./bin/release/netcoreapp1.1/ubuntu.16.04-x64/publish/hello Odaceo
 ```
 
 ## What we learned
@@ -52,19 +52,15 @@ To launch the application use the following command:
 Use the following command to create a simple Hello World application:
 
 ``` shell
-dotnet new -l C# -t Console
+dotnet new console --language C#
 ```
 
 ### Compiling the application for another operating system
 
-Reference the macOS Sierra runtime in the `project.json` file:
+Reference the macOS Sierra runtime in the `hello.csproj` file:
 
-``` json
-  "runtimes": {
-     "ubuntu.14.04-x64": {},
-     "ubuntu.16.04-x64": {},
-     "osx.10.12-x64": {}    
-   }
+``` xml
+    <RuntimeIdentifiers>ubuntu.16.04-x64;osx.10.12-x64</RuntimeIdentifiers>
 ```
 
 And then use the following command for building macOS Sierra binaries:
